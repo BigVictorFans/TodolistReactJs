@@ -1,7 +1,25 @@
 import AddItem from "./components/AddTodoForm";
 import List from "./components/TodoList";
+import { useState } from "react";
 
 function App() {
+    const [todos, setTodos] = useState([
+      {
+        id: 1,
+        text: "Task 1",
+        isCompleted: true
+      },
+      {
+        id: 2,
+        text: "Task 2",
+        isCompleted: false
+      },
+      {
+        id: 3,
+        text: "Task 3",
+        isCompleted: false
+      }
+  ]);
   return (
     <div>
       <div
@@ -10,8 +28,12 @@ function App() {
       >
         <div className="card-body">
           <h3 className="card-title mb-3">My Todo List</h3>
-          <List />
-          <AddItem />
+          <List todos={todos} />
+          <AddItem
+            //method 1
+            todos={todos}
+            setTodos={setTodos}
+          />
         </div>
       </div>
     </div>

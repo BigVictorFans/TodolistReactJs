@@ -1,11 +1,13 @@
 import Item from "./TodoItem"
-function List(){
+function List(props){
+    const {todos} = props;
     return(
         <div>
             <ul className="list-group">
-                <Item task ="Task 1" isCompleted={true} />
-                <Item task ="Task 2" isCompleted={false} />
-                <Item task ="Task 3" isCompleted={true} />
+                {todos.map((item, index) => {
+                    const {id, text, isCompleted } = item;
+                    return <Item key={id} text={text} isCompleted={isCompleted} />;
+                })}
             </ul>
         </div>
     )

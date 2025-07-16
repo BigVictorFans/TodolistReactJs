@@ -1,5 +1,5 @@
 function Item(props) {
-  const { task, isCompleted } = props;
+  const { text, isCompleted } = props;
   return (
         <div>
             <li
@@ -17,7 +17,7 @@ function Item(props) {
                         </button>
                     )}
 
-                    <span className="ms-2">{task}</span>
+                    <span className="ms-2">{text}</span>
                 </div>
                 <div>
                     <button className="btn btn-sm btn-danger">
