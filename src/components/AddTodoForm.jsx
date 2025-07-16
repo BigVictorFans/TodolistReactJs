@@ -8,7 +8,7 @@ function AddItem(props){
                         <input
                         type="text"
                         className="form-control"
-                        placeholder="Add new student..."
+                        placeholder="Add new task..."
                         id="taskname"
                         required
                         />
