@@ -28,7 +28,7 @@ function App() {
       >
         <div className="card-body">
           <h3 className="card-title mb-3">My Todo List</h3>
-          <List todos={todos} />
+          <List todos={todos} setTodos={setTodos} />
           <AddItem
             //method 1
             todos={todos}

@@ -1,12 +1,12 @@
 import Item from "./TodoItem"
 function List(props){
-    const {todos} = props;
+    const {todos, setTodos} = props;
     return(
         <div>
             <ul className="list-group">
-                {todos.map((item, index) => {
-                    const {id, text, isCompleted } = item;
-                    return <Item key={id} text={text} isCompleted={isCompleted} />;
+                {todos.map((task) => {
+                    const {id, text, isCompleted } = task;
+                    return <Item key={id} id={id} text={text} isCompleted={isCompleted} todos={todos} setTodos={setTodos} />;
                 })}
             </ul>
         </div>
